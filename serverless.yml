@@ -2,9 +2,9 @@ service: aws-lambda-nodejs-rest-dev-app
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs20.x
   stage: dev
-  region: us-west-1
+  region: us-east-1
 
 functions:
   app:
