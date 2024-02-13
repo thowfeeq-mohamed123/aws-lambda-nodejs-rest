@@ -1,0 +1,10 @@
+service: aws-lambda-nodejs-rest
+provider:
+  name: aws
+  runtime: nodejs18.x
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
