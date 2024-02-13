@@ -1,10 +1,16 @@
-service: aws-lambda-nodejs-rest
+service: aws-lambda-nodejs-rest-dev-app
+
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs12.x
+  stage: dev
+  region: us-west-1
+
 functions:
   app:
     handler: index.handler
     events:
       - http: ANY /
       - http: ANY /{proxy+}
+    timeout: 60 # seconds
+    memorySize: 128 # mb
