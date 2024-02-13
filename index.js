@@ -3,7 +3,7 @@ const app = express();
 const serverless = require("serverless-http");
 
 app.get("/", (req, res) => {
-  res.send({ status: 200, message: "Hello world!" });
+  res.send({ status: 200, message: "Hello Mohamed!" });
 });
 
 const handler = serverless(app);
