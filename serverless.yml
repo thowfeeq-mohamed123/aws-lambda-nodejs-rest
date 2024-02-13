@@ -12,5 +12,5 @@ functions:
     events:
       - http: ANY /
       - http: ANY /{proxy+}
-    timeout: 60 # seconds
+    timeout: 600 # seconds
     memorySize: 128 # mb
