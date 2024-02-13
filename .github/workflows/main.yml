@@ -21,7 +21,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: aws lambda create-function --function-name aws-lambda-nodejs-rest-dev-app --runtime nodejs18.x --role arn:aws:iam::833444634357:user/lamba-user
 
     - name: serverless deploy
       uses: serverless/github-action@master
